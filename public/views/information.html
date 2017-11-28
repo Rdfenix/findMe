@@ -1,0 +1,19 @@
+<div ng-controller="ArtistEventCtrl as atr">
+    <div class="row align-card">
+        <div ng-repeat="evt in atr.event">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-block">
+                        <h3 class="card-title" ng-bind="evt.lineup[0]"></h3>
+                        <p class="card-text" ng-bind="evt.venue.city"></p>
+                        <span ng-bind="evt.datetime | date"></span>
+                        <br>
+                        <a ng-href="{{evt.url}}" class="btn btn-primary">Click Here</a>
+                        <span ng-bind="atr.offers.type"></span>
+                        <a ng-href="{{evt.offers[0].url}}" class="btn btn-primary">Click here for sale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div ng-controller="ArtistCtrl as artist">
+    <header>
+        <div class="pull-right">
+            <form class="form-inline my-2 my-lg-0" name="search" ng-submit="artist.search()">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ng-model="artist.name">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-disabled="search.$invalid">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="card" style="width: 45rem;" ng-show="artist.artists.image_url">
+        <div class="card-block">
+            <h4 class="card-title"><a href="#!/events/{{artist.artists.name}}" >{{artist.artists.name}}</a></h4>
+        </div>
+        <img class="card-img-top" ng-src="{{artist.artists.image_url}}" style="width: 45rem;height: 40rem;">
+    </div>
+
+        <!--<div>
+            <h4>{{artist.artists.name}}</h4>
+        </div>
+        <div>
+            <img ng-src="{{artist.artists.image_url}}"></a>
+        </div>-->
+</div>
+

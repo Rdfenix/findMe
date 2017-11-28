@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="findMe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FindMe!</title>
+    <link rel="stylesheet" href="libs/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="top-bar" ng-controller="LoginWithFacebook as login">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="#!/" class="navbar-brand pull-left initial">Find - Me !</a>
+            <a href="#!/search" class="navbar-brand pull-right login">Search</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div ng-view></div>
+    </div>
+    <script src="libs/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="libs/vendor/angular/angular.min.js"></script>
+    <script src="libs/vendor/angular-route/angular-route.js"></script>
+    <script src="js/angular/app.js"></script>
+    <script src="js/angular/service.js"></script>
+    <script src="js/angular/controller.js"></script>
+</body>
+</html>
